@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 import time, json
 
 # https://chromedriver.chromium.org/downloads
-PATH = "C:\Program Files (x86)\chromedriver.exe"
+PATH = "./tools/chromedriver.exe"
 
 WINDOW_SIZE = "1920,1080"
 chrome_options = Options()  

@@ -6,18 +6,18 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 # https://chromedriver.chromium.org/downloads
-PATH = "C:\Program Files (x86)\chromedriver.exe"
+PATH = "./tools/chromedriver.exe"
 
 WINDOW_SIZE = "1920,1080"
 chrome_options = Options()  
-chrome_options.add_argument("--headless") # run background
+# chrome_options.add_argument("--headless") # run background
 chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
 chrome_options.add_argument("--disable-notifications")
 
 driver = webdriver.Chrome(executable_path=PATH,
 					options=chrome_options
 					)  
-driver.get("http://thevuong8000.github.io")
+driver.get("http://facebook.com")
 
 try:
 	WebDriverWait(driver, 5).until(
@@ -26,4 +26,5 @@ try:
 	print("ok")
 except:
 	print("doesn't work")
+time.sleep(5)
 driver.close()

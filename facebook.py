@@ -7,12 +7,12 @@ import accountinfo
 import json, time
 
 # https://chromedriver.chromium.org/downloads
-PATH = "C:\Program Files (x86)\chromedriver.exe"
+PATH = "./tools/chromedriver.exe"
 
 WINDOW_SIZE = "1920,1080"
 chrome_options = Options()  
-chrome_options.add_argument("--headless") # run background
-# chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
+# chrome_options.add_argument("--headless") # run background
+chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
 chrome_options.add_argument("--disable-notifications")
 
 with open('./account/facebook.json') as file:
@@ -87,6 +87,7 @@ class facebook_bot():
 			if len(end_line) != 0:
 				break
 		time.sleep(2)
+		print("Getting friends' information!!!")
 		friends = self.driver.find_elements_by_class_name('fcb')
 		friends = friends[1:]
 		friend_info = []
@@ -114,7 +115,7 @@ class facebook_bot():
 		print(actual_friends, 'friends are active')
 		print(f"There are {self.male} males and {self.female} females in your friend list!!!")
 
-
-my_bot = facebook_bot()
-my_bot.count_friends()
+if __name__ == "__main__":
+	my_bot = facebook_bot()
+	my_bot.count_friends()
 			
