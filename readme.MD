@@ -8,5 +8,6 @@ Install selenium: `pip install selenium`
 2. `python leetcode.py` to get to problems page
 3. `python facebook.py` to get the number of males and females friends(and 'undefined gender')
 
+> :warning: **If you are using mobile browser**: Be very careful here!
 
 ![alt text](https://github.com/thevuong8000/auto-bot/blob/master/warning.JPG)
