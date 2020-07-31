@@ -9,4 +9,4 @@ Install selenium: `pip install selenium`
 3. `python facebook.py` to get the number of males and females friends(and 'undefined gender')
 
 
-![alt text](https://github.com/thevuong8000/auto-bot/warning.JPG?raw=true)
+![alt text](https://github.com/thevuong8000/auto-bot/blob/master/warning.JPG)
